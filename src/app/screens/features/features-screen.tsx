@@ -21,7 +21,7 @@ const Content = () => {
     
     return (
         <div className={styles.content}>
-            {
+            {/* {
                 articles.map(el => 
                     <HorizontalCard 
                         key={el.id}
@@ -31,7 +31,7 @@ const Content = () => {
                         link={`/news/${el.id}-article`}
                     />
                 )
-            }
+            } */}
         </div>
     )
 }
