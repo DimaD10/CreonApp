@@ -37,14 +37,11 @@ export default function HeroScreen() {
 
 const VideoBg = () => {
     return (
-        <div className={styles.videoBg}>
-            <video
-              src={require("@/public/videos/main-background-video.mp4")}
-              autoPlay
-              muted
-              loop
-            />
-        </div>
+      <div className={styles.videoBg}>
+        <video width="1920" height="1080" preload="auto" autoPlay loop muted>
+            <source src="/videos/main-background-video.mp4" type="video/mp4" />
+        </video>
+      </div>
     );
 }
 

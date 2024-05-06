@@ -45,12 +45,9 @@ export default function NewsScreen() {
 const VideoBg = () => {
     return (
         <div className={styles.videoBg}>
-            <video
-              src={require("@/public/videos/roadmap-video.mp4")}
-              autoPlay
-              muted
-              loop
-            />
+            <video width="1920" height="1080" preload="auto" autoPlay loop muted>
+                <source src="/videos/roadmap-video.mp4" type="video/mp4" />
+            </video>
         </div>
     );
 }
