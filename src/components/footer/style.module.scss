@@ -1,0 +1,46 @@
+.wrapper {
+  @apply flex
+    items-center
+    gap-x-5
+    md:gap-[90px]
+    gap-y-3
+    pt-[15px]
+    pb-[25px]
+    md:pb-[35px]
+    max-md:flex-wrap
+    relative
+    z-20;
+}
+
+.copyright {
+  @apply text-base
+    md:text-nowrap
+    max-md:order-1
+    max-md:mr-auto;
+}
+
+.social {
+  @apply max-md:order-3
+    max-md:w-full;
+}
+
+.poweredBy {
+  @apply md:ml-auto
+    inline-flex
+    items-end
+    gap-1.5
+    text-base
+    max-md:order-2
+    max-md:flex-wrap;
+
+  span {
+    @apply text-nowrap;
+  }
+
+  a {
+    @apply py-[1px]
+        transition-all
+        duration-200
+        hover:opacity-70;
+  }
+}

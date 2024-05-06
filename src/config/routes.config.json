@@ -1,0 +1,49 @@
+{
+    "home": "/",
+    "siteNavigation": [
+        {
+            "page": "Creon pass",
+            "path": "/#creon-pass"
+        },
+        {
+            "page": "Token",
+            "path": ""
+        },
+        {
+            "page": "AI revenue",
+            "path": ""
+        },
+        {
+            "page": "AI launchpad",
+            "path": ""
+        }
+    ],
+    "actions": {
+        "connectWallet": {
+            "page": "Connect",
+            "path": "/connect"
+        },
+        "creonPass": {
+            "page": "Creon Pass",
+            "path": "#creon-pass"
+        },
+        "buyPass": {
+            "page": "Buy Creon Pass",
+            "path": "/buy-creon-pass"
+        }
+    },
+    "social": {
+        "telegram": {
+            "page": "Telegram Social Community",
+            "path": "https://web.telegram.org/"
+        },
+        "discord": {
+            "page": "Discord Social Community",
+            "path": "https://discord.com/"
+        },
+        "twitter": {
+            "page": "Twitter Social Community",
+            "path": "https://twitter.com/"
+        }
+    }
+}

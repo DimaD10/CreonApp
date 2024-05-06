@@ -1,0 +1,200 @@
+.header {
+  @apply absolute 
+    top-0 
+    left-0 
+    w-screen
+    z-50;
+}
+
+.logo {
+  @apply mr-auto
+    lg:max-w-[140px]
+    max-w-[120px]
+    z-20;
+}
+
+.wrapper {
+  @apply py-[10px] 
+    min-h-[104px] 
+    max-md:min-h-[78px]
+    text-lg 
+    font-bold 
+    flex 
+    items-center 
+    lg:gap-[58px]
+    gap-[28px]
+    max-md:py-[20px]
+    max-md:gap-[36px];
+}
+
+.navigation {
+  @apply flex
+    items-center
+    lg:gap-[58px]
+    gap-[28px]
+    flex-col-reverse
+    md:flex-row
+    max-md:fixed
+    max-md:top-0
+    max-md:right-0
+    max-md:h-screen
+    max-md:pl-[30px]
+    max-md:pb-[30px]
+    max-md:pt-[88px]
+    max-md:items-start
+    max-md:w-[208px]
+    max-md:z-10
+    max-md:bg-primary
+    max-md:translate-x-[100%]
+    transition-all
+    duration-300;
+
+    &.active {
+        @apply max-md:translate-x-[0%]
+    }
+}
+
+.overlay {
+  @apply fixed
+    top-0
+    bottom-0
+    left-0
+    right-0
+    bg-overlay-grey
+    backdrop-blur-md
+    md:hidden
+    transition-all
+    duration-200
+    opacity-0
+    pointer-events-none;
+
+    &.active {
+        @apply opacity-100
+            pointer-events-auto;
+    }
+}
+
+.actions {
+  @apply flex
+    gap-[15px]
+    z-20;
+}
+
+.social {
+  @apply md:hidden;
+}
+
+.burger {
+  @apply w-[38px]
+    h-[38px]
+    bg-blue
+    rounded-md
+    flex
+    flex-col
+    gap-1
+    items-center
+    justify-center
+    transition-all
+    duration-200
+    hover:shadow-blue-hover-sm
+    overflow-hidden
+    md:hidden;
+
+  &.active {
+    span {
+      &:nth-child(2) {
+        @apply opacity-0
+            translate-x-[40%];
+      }
+
+      &:nth-child(1) {
+        @apply rotate-[-45deg]
+            translate-y-[6px];
+      }
+
+      &:nth-child(3) {
+        @apply rotate-45
+            translate-y-[-6px];
+      }
+    }
+  }
+
+  span {
+    @apply block
+        h-[2px]
+        w-[18px]
+        bg-white
+        transition-all
+        duration-200;
+  }
+}
+
+.menu {
+  @apply flex
+    flex-wrap
+    lg:gap-x-10
+    gap-x-6
+    gap-y-2
+    justify-center
+    max-md:flex-col
+    max-md:mb-auto
+    max-md:gap-0
+    max-md:w-full
+    max-md:border-b
+    max-md:border-dark-grey;
+
+  .menu {
+    &Item {
+      @apply flex
+        flex-nowrap
+        gap-1
+        max-md:pr-3
+        max-md:py-[15px]
+        max-md:border-t
+        max-md:border-dark-grey;
+    }
+
+    &Text {
+      @apply lg:text-lg
+        text-base
+        capitalize;
+    }
+
+    &Label {
+      @apply h-[14px]
+        px-1
+        flex
+        items-center
+        rounded-full
+        bg-primary
+        text-xs
+        uppercase
+        pointer-events-none
+        text-purple;
+    }
+  }
+
+  .activeLink {
+    @apply transition-all
+        duration-200
+        md:hover:translate-y-[-10%]
+        relative
+        after:content-[""]
+        after:absolute
+        after:left-[50%]
+        after:translate-x-[-50%]
+        after:w-[4px]
+        after:h-[4px]
+        after:rounded-full
+        after:bg-white
+        md:after:bottom-[-5px]
+        max-md:after:top-[50%]
+        max-md:after:left-[-8px]
+        after:opacity-0
+        md:after:translate-y-[5px]
+        after:transition-all
+        after:duration-200
+        hover:after:opacity-100
+        hover:after:translate-y-[0px];
+  }
+}

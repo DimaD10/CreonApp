@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  @apply scroll-smooth;
+}
+
+html {
+  @apply max-w-[100vw]
+    overflow-x-hidden;
+
+  &::-webkit-scrollbar {
+    @apply w-[5px];
+  }
+  &::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply bg-purple
+        rounded-[1px];
+  }
+}
+
+body {
+  @apply bg-primary 
+    text-white;
+}
+
+.wrapper {
+  @apply max-w-[100vw]
+        overflow-hidden;
+}
+
+.container {
+  @apply max-w-container-width mx-auto px-[15px];
+
+  &-big {
+    @apply max-w-container-width-wide;
+  }
+}
+
+.title {
+  @apply uppercase
+    text-2xl
+    sm:text-3xl
+    lg:text-5xl
+    xl:text-hero
+    leading-[110%];
+}
+
+.subtitle {
+  @apply lg:text-subtitle
+    text-lg
+    font-bold;
+
+  background: linear-gradient(90deg, rgb(61, 139, 255), rgb(171, 35, 255));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+a.subtitle {
+  @apply inline-block
+    relative
+    py-[7px]
+    after:content-[""]
+    after:absolute
+    after:top-0
+    after:left-0
+    after:h-[1px]
+    after:w-full
+    after:transition-all
+    after:duration-200
+    before:content-[""]
+    before:absolute
+    before:bottom-0
+    before:right-0
+    before:h-[1px]
+    before:w-full
+    before:transition-all
+    before:duration-200
+    hover:after:w-[0%]
+    hover:before:w-[0%];
+
+  &::after,
+  &::before {
+    background: linear-gradient(90deg, rgb(61, 139, 255), rgb(171, 35, 255));
+  }
+}

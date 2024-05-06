@@ -1,0 +1,53 @@
+.card {
+  @apply flex
+    rounded-md
+    overflow-hidden
+    bg-overlay-grey-second
+    min-h-[305px]
+    max-md:flex-col-reverse
+    max-md:max-w-[560px]
+    max-lg:mx-auto;
+}
+
+.body {
+  @apply p-10
+    flex
+    flex-col
+    gap-[15px]
+    items-start
+    max-md:p-5;
+}
+
+.title {
+  @apply uppercase
+    text-lg
+    sm:text-xl
+    lg:text-2xl
+    xl:text-big-subtitle
+    lg:leading-[120%]
+    transition-all
+    duration-200
+    hover:text-blue;
+}
+
+.paragraph {
+  @apply text-base
+    md:text-lg;
+}
+
+.imageLink {
+  @apply lg:min-w-[450px]
+    min-w-[290px]
+    overflow-hidden
+    h-full;
+
+  img {
+    @apply w-full
+        h-full
+        object-cover
+        object-center
+        transition-all
+        duration-200
+        hover:scale-105;
+  }
+}

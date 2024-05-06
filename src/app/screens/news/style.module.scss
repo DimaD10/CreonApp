@@ -1,0 +1,57 @@
+.wrapper {
+  @apply pt-[80px]
+    min-h-full
+    min-h-dvh
+    md:pb-[100px]
+    pb-[60px]
+    flex
+    pb-[160px];
+}
+
+.videoBg {
+  @apply absolute
+    top-0
+    left-0
+    right-0
+    bottom-0
+    overflow-hidden
+    after:content-[""]
+    after:absolute
+    after:top-0
+    after:left-0
+    after:right-0
+    after:bottom-0
+    after:opacity-35;
+
+  &::after {
+    background: linear-gradient(
+      0deg,
+      rgb(0, 0, 0) 0%,
+      rgb(61, 139, 255) 47.144%,
+      rgb(171, 35, 255) 99.279%
+    );
+  }
+
+  video {
+    @apply w-full
+        h-full
+        object-cover
+        object-center;
+  }
+}
+
+.content {
+  @apply relative
+    w-full
+    z-10
+    flex
+    flex-col
+    items-center
+    gap-5
+    md:mb-20;
+}
+
+.title {
+  @apply mb-5
+    md:mb-10;
+}

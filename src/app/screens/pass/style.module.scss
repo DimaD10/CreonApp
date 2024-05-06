@@ -1,0 +1,86 @@
+.wrapper {
+  @apply grid
+    grid-cols-2
+    justify-between
+    min-h-screen
+    min-h-dvh
+    items-center
+    lg:gap-10
+    gap-4
+    max-md:flex
+    max-md:flex-col-reverse
+    py-[20px];
+}
+
+.video {
+  @apply relative
+    before:content-[""]
+    before:absolute
+    before:top-0
+    before:left-0
+    before:right-0
+    before:h-[60px]
+    max-md:before:h-[50px]
+    before:rounded-[200%]
+    before:translate-y-[-50%]
+    before:bg-primary
+    before:blur-lg
+    max-md:before:blur-md
+    after:content-[""]
+    after:absolute
+    after:bottom-0
+    after:left-0
+    after:right-0
+    after:h-[80px]
+    max-md:after:h-[60px]
+    after:rounded-[200%]
+    after:translate-y-[50%]
+    after:bg-primary
+    after:blur-lg
+    max-md:after:blur-md
+    max-md:max-w-[400px];
+
+  video {
+    @apply h-full
+        object-contain
+        object-center;
+  }
+}
+
+.content {
+  @apply flex
+    flex-col
+    lg:gap-[30px]
+    gap-[20px]
+    items-start
+    py-[20px]
+    z-10;
+}
+
+.divider {
+  @apply h-[1px]
+    w-full
+    bg-dark-grey;
+}
+
+.steps {
+  @apply flex
+    flex-col
+    items-start
+    mt-[10px]
+    gap-[10px];
+}
+
+.step {
+  @apply inline-block
+    py-[14px]
+    px-[18px]
+    text-base
+    md:text-lg
+    rounded-md
+    border
+    border-dark-grey
+    transition-all
+    duration-200
+    hover:bg-dark-grey;
+}
