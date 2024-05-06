@@ -7,7 +7,6 @@ export function MainLayout({ children }: PropsWithChildren) {
         <div 
             className="
                 min-h-screen
-                min-h-dvh
                 flex
                 flex-col
                 max-w-[100vw]

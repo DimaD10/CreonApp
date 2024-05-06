@@ -1,0 +1,18 @@
+.wrapper {
+  @apply py-[60px]
+    flex
+    items-center
+    min-h-screen;
+}
+
+.content {
+  @apply grid
+    md:grid-cols-2
+    xl:grid-cols-3
+    w-full
+    gap-10
+    max-lg:gap-x-[24px]
+    max-md:flex
+    max-md:flex-col
+    max-md:items-center;
+}

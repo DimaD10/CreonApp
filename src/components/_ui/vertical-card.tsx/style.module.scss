@@ -1,0 +1,106 @@
+.card {
+  @apply flex
+    flex-col
+    rounded-md
+    bg-overlay-grey-second
+    pr-[30px]
+    max-sm:pr-[22px]
+    relative
+    max-md:max-w-[560px]
+    pb-1;
+}
+
+.head {
+  @apply p-[30px]
+    flex
+    flex-col
+    items-start
+    gap-[15px]
+    items-start
+    max-sm:p-[22px]
+    pr-0;
+}
+
+.title {
+  @apply uppercase
+    text-lg
+    sm:text-xl
+    lg:text-2xl
+    xl:text-big-subtitle
+    lg:leading-[120%]
+    transition-all
+    duration-200;
+}
+
+a.title {
+    @apply hover:text-blue;
+}
+
+.subtitle {
+    @apply md:min-h-[3.5rem]
+}
+
+.paragraph {
+  @apply text-base
+    md:text-lg
+    p-[30px]
+    max-sm:p-[22px]
+    pr-0;
+}
+
+.soonLabel {
+  @apply px-[6px]
+    rounded-full
+    bg-white
+    text-primary
+    text-label
+    font-bold
+    uppercase
+    absolute
+    top-0
+    right-[36px]
+    translate-y-[-50%];
+}
+
+.imageLink {
+  @apply w-full
+    overflow-hidden
+    relative
+    after:content-[""]
+    after:absolute
+    after:top-0
+    after:left-0
+    after:right-0
+    after:bottom-0
+    after:mix-blend-overlay
+    after:transition-all
+    after:duration-200
+    h-[235px]
+    
+    rounded-r-lg;
+
+  &:not(.default) {
+    @apply hover:after:opacity-0;
+  }
+
+  &::after {
+    background: linear-gradient(
+      180deg,
+      rgb(61, 111, 255) 0%,
+      rgb(145, 35, 255) 99.279%
+    );
+  }
+
+  &:not(.default):hover img {
+    @apply scale-105;
+  }
+
+  img {
+    @apply w-full
+        h-full
+        object-cover
+        object-center
+        transition-all
+        duration-200;
+  }
+}

@@ -2,9 +2,9 @@
 import { MainSection } from "@/components/_layouts/main-section/main-section";
 import styles from "./style.module.scss"
 import content from "./features.data.json";
-import HorizontalCard from "@/components/_ui/horizontal-card/horizontal-card";
+import VerticalCard from "@/components/_ui/vertical-card.tsx/vertical-card";
 
-export default function NewsScreen() {
+export default function FeaturesScreen() {
   return (
     <>
       <MainSection>
@@ -21,17 +21,20 @@ const Content = () => {
     
     return (
         <div className={styles.content}>
-            {/* {
+            {
                 articles.map(el => 
-                    <HorizontalCard 
+                    <VerticalCard 
                         key={el.id}
                         title={el.title}
                         paragraph={el.paragraph}
+                        subtitle={el.subtitle}
                         previewSrc={el.previewSrc}
-                        link={`/news/${el.id}-article`}
+                        link={
+                            (el.id === "") ? "" : `/features/${el.id}-slot`
+                        }
                     />
                 )
-            } */}
+            }
         </div>
     )
 }

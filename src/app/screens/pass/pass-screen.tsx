@@ -27,7 +27,7 @@ export default function PassScreen() {
 const Video = () => {
   return (
     <div className={styles.video}>
-        <video width="1920" height="1080" preload="auto" autoPlay loop muted>
+        <video width="1920" height="1080" preload="auto" autoPlay loop muted playsInline>
             <source src="/videos/nft-video.mp4" type="video/mp4" />
         </video>
     </div>

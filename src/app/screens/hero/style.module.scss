@@ -1,7 +1,6 @@
 .wrapper {
   @apply pt-[120px]
-    min-h-full
-    min-h-dvh
+    min-h-screen
     md:pb-[100px]
     pb-[60px]
     flex;
@@ -20,7 +19,7 @@
     after:left-0
     after:right-0
     after:bottom-0
-    after:opacity-35;
+    after:mix-blend-overlay;
 
   &::after {
     background: linear-gradient(

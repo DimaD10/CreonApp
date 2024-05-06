@@ -18,6 +18,7 @@ const config: Config = {
       },
       fontSize: {
         xs: "0.625rem",
+        label: "12px",
         hero: "68px",
         subtitle: "22px",
         "big-subtitle": "38px",
