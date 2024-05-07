@@ -1,3 +1,4 @@
+"use client"
 
 import { MainSection } from "@/components/_layouts/main-section/main-section";
 import styles from "./style.module.scss"
@@ -6,6 +7,9 @@ import { monument } from "@/font.config";
 import Link from "next/link";
 import routes from '@/config/routes.config.json'
 import content from './hero.data.json'
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import TextAnimation from "@/components/_ui/text-animation/text-animation";
 
 export default function HeroScreen() {
   return (
@@ -55,24 +59,37 @@ const VideoBg = () => {
 
 const Content = () => {
     const passRouter: string = routes.actions.creonPass.path;
+    const container = useRef(null);
+    const titleInView = useInView(container, { once: true });
 
     return (
-        <div className={styles.content}>
+        <div className={styles.content} ref={container}>
             <h1
                 className={clsx(
                     styles.title,
                     "title",
-                    monument.className
+                    monument.className,
+
+                    "max-w-full"
                 )}
-                dangerouslySetInnerHTML={{ __html: content.title }}
-            ></h1>
+            >
+                <TextAnimation 
+                    text={content.title}
+                />
+            </h1>
+            
 
             <Link
                 href={passRouter}
                 className={clsx(
-                    styles.subtitle,
+                    styles.link,
                     "subtitle"
                 )}
+                style={ {
+                    opacity: titleInView ? 1 : 0,
+                    transform: titleInView ? 
+                        "translateY(0px)" : "translateY(20px)"
+                }}
             >
                 { content.action }
             </Link>

@@ -6,7 +6,9 @@
     min-h-[305px]
     max-md:flex-col-reverse
     max-md:max-w-[560px]
-    max-lg:mx-auto;
+    max-lg:mx-auto
+    duration-500
+    delay-150;
 }
 
 .body {

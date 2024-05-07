@@ -27,6 +27,11 @@ const config: Config = {
         "container-width": "1470px",
         "container-width-wide": "1850px",
       },
+      transitionDelay: {
+        "900": "900ms",
+        "1200": "1200ms",
+        "600": "600ms"
+      },
       boxShadow: {
         "white-hover": "0 0 0 5px rgba(255, 255, 255, 0.3)",
         "white-hover-sm": "0 0 0 3px rgba(255, 255, 255, 0.3)",

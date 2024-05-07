@@ -1,7 +1,7 @@
 "use client";
 
 import ExpandIcon from "@/components/_icons/expand-icon";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import IconShield from "@/components/_icons/icon-shield";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -11,9 +11,12 @@ import styles from "./style.module.scss";
 import { AccordionBlockProps } from "./accordion.config";
 import Image from "next/image";
 import { ACCORDION_ICON_ALT } from "@/constants/image-alts.constants";
+import { useInView } from "framer-motion";
 
 const AccordionBlock = ({content}: AccordionBlockProps) => {
     const [expanded, setExpanded] = useState<string | false>("panel-0");
+    const container = useRef(null);
+    const isInView = useInView(container, { once: true });
 
     const handleChange =
       (panel: string) => (e: React.SyntheticEvent, isExpanded: boolean) => {
@@ -21,7 +24,14 @@ const AccordionBlock = ({content}: AccordionBlockProps) => {
       };
 
     return (
-        <div>
+        <div
+            ref={container}
+            className="duration-500 delay-600"
+            style={{
+                opacity: isInView ? 1 : 0,
+                transform: isInView ? "translateX(0%)" : "translateX(20%)",
+            }}
+        >
             {content.map((el, i) => 
                 <Accordion
                     key={i}

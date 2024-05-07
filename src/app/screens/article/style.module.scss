@@ -16,7 +16,9 @@
     uppercase
     lg:text-big-subtitle
     text-xl
-    leading-[130%];
+    leading-[130%]
+    duration-300
+    delay-500;
 }
 
 .article {
@@ -40,7 +42,9 @@
         flex
         flex-col
         gap-[20px]
-        md:gap-[28px];
+        md:gap-[28px]
+        duration-500
+        delay-700;
   }
 
   &Text {
@@ -51,7 +55,9 @@
 .video {
   @apply flex-auto
     rounded-md
-    overflow-hidden;
+    overflow-hidden
+    duration-500
+    delay-100;
 
   video {
     @apply w-full;

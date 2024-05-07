@@ -14,7 +14,8 @@
     md:text-3xl
     xl:text-big-subtitle
     md:leading-[110%]
-    text-xl;
+    text-xl
+    duration-500;
 
   span {
     @apply uppercase
@@ -39,5 +40,7 @@
     2xl:translate-x-[120px]
     lg:translate-x-[60px]
     max-lg:max-w-[520px]
-    max-lg:mx-auto;
+    max-lg:mx-auto
+    duration-500
+    delay-300;
 }

@@ -1,11 +1,17 @@
+"use client"
+
 import Link from 'next/link';
 import { CardProps } from './vertical-card.config';
 import styles from './style.module.scss'
 import Image from 'next/image';
 import clsx from 'clsx';
 import { monument } from '@/font.config';
+import { useRef } from 'react';
+import { useInView } from 'framer-motion';
 
 export default function VerticalCard({ title, paragraph, subtitle, previewSrc, link }: CardProps) {
+    const container = useRef(null);
+    const isInView = useInView(container, { once: true });
 
   return (
     <div
@@ -15,6 +21,12 @@ export default function VerticalCard({ title, paragraph, subtitle, previewSrc, l
                 (link === "" ? styles.soon : "")
             )
         }
+        ref={container}
+        style={{
+            opacity: isInView ? 1 : 0,
+            transform: isInView ? "translateY(0px)" : "translateY(80px)",
+            scale: isInView ? 1 : 0.8
+        }}
     >
 
         {(link === "") && 

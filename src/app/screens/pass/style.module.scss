@@ -62,12 +62,19 @@
     bg-dark-grey;
 }
 
+.subtitle {
+  @apply transition-all
+    duration-500
+    delay-600;
+}
+
 .steps {
   @apply flex
     flex-col
     items-start
     mt-[10px]
-    gap-[10px];
+    gap-[10px]
+    duration-300;
 }
 
 .step {
