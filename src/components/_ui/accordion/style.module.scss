@@ -1,0 +1,61 @@
+.accordion {
+  @apply bg-transparent
+    text-white
+    border-b
+    border-dark-grey
+    rounded-none
+    mb-0;
+
+  margin: 0 !important;
+
+  &Header {
+    @apply md:text-subtitle
+        text-lg
+        font-bold
+        flex
+        items-center
+        sm:gap-6
+        gap-[10px]
+        md:py-[10px]
+        py-0
+        pl-0;
+  }
+
+  &HeaderPlate {
+    @apply flex
+        items-center
+        gap-5
+        sm:gap-[30px];
+
+    svg {
+      @apply w-[100px]
+        h-auto
+        flex-shrink-0
+        max-md:w-[70px];
+    }
+  }
+
+  &Details {
+    @apply p-0
+        pb-[30px]
+        text-base
+        md:text-lg
+        pl-[90px]
+        sm:pl-[100px]
+        md:pl-[130px];
+  }
+}
+
+.accordionIcon {
+  @apply relative;
+
+  .icon {
+    @apply absolute
+        top-[50%]
+        left-[50%]
+        translate-x-[-50%]
+        translate-y-[-50%]
+        max-md:w-[18px]
+        max-md:h-[18px];
+  }
+}

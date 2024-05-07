@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { monument } from "@/font.config";
 import Link from "next/link";
 import routes from '@/config/routes.config.json'
+import content from './hero.data.json'
 
 export default function HeroScreen() {
   return (
@@ -63,9 +64,8 @@ const Content = () => {
                     "title",
                     monument.className
                 )}
-            >
-                The world&rsquo;s first platform for Tokenizing AI&nbsp;blockchain projects
-            </h1>
+                dangerouslySetInnerHTML={{ __html: content.title }}
+            ></h1>
 
             <Link
                 href={passRouter}
@@ -74,7 +74,7 @@ const Content = () => {
                     "subtitle"
                 )}
             >
-                Hold the Creon Pass NFT and earn passive income from AI Tools
+                { content.action }
             </Link>
         </div>
     )

@@ -1,0 +1,25 @@
+{
+    "title": "Our vision is to support the innovation of AI blockchain projects <span class='subtitle'> while prioritizing communities and democratizing profits </span>",
+    "accordeonItems": [
+        {
+            "icon": "/img/accordion/icon1.svg",
+            "title": "Profitability and <br> Growth",
+            "paragraph": "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success."
+        },
+        {
+            "icon": "/img/accordion/icon2.svg",
+            "title": "Transparent & Fair Decentralized Earnings",
+            "paragraph": "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success."
+        },
+        {
+            "icon": "/img/accordion/icon3.svg",
+            "title": "Launching the <br> future",
+            "paragraph": "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success."
+        },
+        {
+            "icon": "/img/accordion/icon4.svg",
+            "title": "Transparent & Fair Decentralized Earnings",
+            "paragraph": "At Creon, we handpick cutting-edge AI projects and offer our community and token holders early access and investment opportunities. Our community actively contributes to the growth and profitability of these projects, creating a dynamic ecosystem of innovation and shared success."
+        }
+    ]
+}

@@ -32,7 +32,7 @@ body {
 
 .wrapper {
   @apply max-w-[100vw]
-        overflow-hidden;
+    overflow-hidden;
 }
 
 .container {
@@ -89,5 +89,17 @@ a.subtitle {
   &::after,
   &::before {
     background: linear-gradient(90deg, rgb(61, 139, 255), rgb(171, 35, 255));
+  }
+}
+
+.MuiAccordionSummary-content.Mui-expanded {
+  svg {
+    .shield-bg {
+      @apply fill-dark-grey
+        opacity-100;
+    }
+    .shield-border {
+      @apply fill-white;
+    }
   }
 }
