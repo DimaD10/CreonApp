@@ -22,9 +22,9 @@ const Content = () => {
     return (
         <div className={styles.content}>
             {
-                articles.map(el => 
+                articles.map((el, i) => 
                     <VerticalCard 
-                        key={el.id}
+                        key={i}
                         title={el.title}
                         paragraph={el.paragraph}
                         subtitle={el.subtitle}

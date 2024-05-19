@@ -33,17 +33,13 @@
         }
     },
     "social": {
-        "telegram": {
-            "page": "Telegram Social Community",
-            "path": "https://web.telegram.org/"
+        "linkedin": {
+            "page": "Benko LinkedIn",
+            "path": "https://www.linkedin.com/in/dmytro-dziubenko-a7285420b/"
         },
-        "discord": {
-            "page": "Discord Social Community",
-            "path": "https://discord.com/"
-        },
-        "twitter": {
-            "page": "Twitter Social Community",
-            "path": "https://twitter.com/"
+        "github": {
+            "page": "Benko GitHub Profile",
+            "path": "https://github.com/DimaD10"
         }
     }
 }

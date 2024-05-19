@@ -3,9 +3,7 @@
 import Link from "next/link";
 import routes from "@/config/routes.config.json";
 import styles from "./style.module.scss";
-import { TelegramIcon } from "@/components/_icons/social/telegram-icon";
-import { DiscordIcon } from "@/components/_icons/social/discord-icon";
-import { TwitterIcon } from "@/components/_icons/social/twitter-icon";
+import { Linkedin, Github } from "lucide-react";
 
 export const SocialItems = () => {
     const socialItems = routes.social;
@@ -13,22 +11,16 @@ export const SocialItems = () => {
     return (
         <div className={styles.social}>
             <Link 
-                href={socialItems.telegram.path}
+                href={socialItems.linkedin.path}
                 target="_blank"
             >
-                <TelegramIcon />
+                <Linkedin />
             </Link>
             <Link 
-                href={socialItems.discord.path}
+                href={socialItems.github.path}
                 target="_blank"
             >
-                <DiscordIcon />
-            </Link>
-            <Link 
-                href={socialItems.twitter.path}
-                target="_blank"
-            >
-                <TwitterIcon />
+                <Github />
             </Link>
         </div>
     );
