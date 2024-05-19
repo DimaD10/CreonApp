@@ -19,7 +19,7 @@ The application is fully adaptive for any screen resolution and for any client. 
 6. **Lucide Icons library** for quick access to user icons.
 7. **MUI library** for using and customizing ready UI components (accordion component)
 8. **FramerMotion library** to build animation on scrolling.
-9. Nex.JS video, image and font **optimization features**.
+9. Next.JS video, image and font **optimization features**.
 10. **Vercel** for comfortable deployment.
 
 ---
